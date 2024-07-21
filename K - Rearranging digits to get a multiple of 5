@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt();
+        for (int t = 0; t < T; t++) {
+            int D = sc.nextInt();
+            String N = sc.next();
+
+            if (isMultipleOf5(N)) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
+    }
+
+    private static boolean isMultipleOf5(String N) {
+        for (char c : N.toCharArray()) {
+            if (c == '0' || c == '5') {
+                return true;
+            }
+        }
+        return false;
+    }
+}
